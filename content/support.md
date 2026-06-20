@@ -8,7 +8,7 @@ The fastest way to reach a human is by email:
 
 - **Email:** nudgeplannerapp@gmail.com
 
-Please include your device type (iPhone or Android) and a short description of what happened. If it's about a specific screen, a screenshot helps a lot.
+Please include your device and iOS version (e.g. iPhone 14, iOS 17) and a short description of what happened. If it's about a specific screen, a screenshot helps a lot.
 
 ## Frequently asked questions
 

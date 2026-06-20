@@ -7,13 +7,19 @@
   <title>Terms of Use — Nudge</title>
   <meta name="description" content="The simple agreement between you and Nudge for using the voice-first daily planner." />
   <link rel="canonical" href="https://namle05.github.io/nudge-site/terms.html" />
-  <meta name="theme-color" content="#5E72E4" />
-  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#5E72E4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0C0E22" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
 
+  <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512" />
   <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Nudge" />
   <meta property="og:title" content="Terms of Use — Nudge" />
@@ -24,32 +30,37 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Nudge — plan your day by voice." />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Terms of Use — Nudge" />
   <meta name="twitter:description" content="The simple agreement between you and Nudge for using the voice-first daily planner." />
   <meta name="twitter:image" content="https://namle05.github.io/nudge-site/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Nudge — plan your day by voice." />
 
+  <!-- Fonts: Fraunces (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..600&family=Inter:wght@400;500;550;600;650;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;550;600;650;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-bar" aria-hidden="true"></div>
 
   <header class="site-header">
+    <span class="nav-sentinel" aria-hidden="true"></span>
     <div class="container">
       <a class="brand" href="index.html" aria-label="Nudge — home">
-        <img src="assets/icon.png" alt="" width="32" height="32" />
+        <img src="assets/favicon-32.png" alt="" width="32" height="32" />
         <span>Nudge</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a class="nav-secondary" href="index.html#features">Features</a>
-        <a class="nav-secondary" href="privacy.html">Privacy</a>
+        <a class="nav-secondary" href="index.html#how">How it works</a>
+        <a class="nav-secondary" href="index.html#privacy">Privacy</a>
         <a class="nav-secondary" href="support.html">Support</a>
-        <a class="nav-cta" href="index.html">Open Nudge</a>
+        <a class="nav-cta" href="support.html">Get in touch</a>
       </nav>
     </div>
   </header>
@@ -57,74 +68,109 @@
   <main id="main">
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
-        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Legal</span>
-        <h1 id="page-title">Terms of Use</h1>
-        <div class="meta"><span><b>App:</b> Nudge</span><span><b>Last updated:</b> June 16, 2026</span></div>
+        <span class="eyebrow" data-reveal><span class="dot" aria-hidden="true"></span> Legal</span>
+        <h1 id="page-title" data-reveal style="--reveal-delay:60ms">Terms of Use</h1>
+        <div class="meta" data-reveal style="--reveal-delay:120ms">
+          <span><b>App:</b> Nudge</span>
+          <span><b>Last updated:</b> <span class="t-num">June 16, 2026</span></span>
+        </div>
       </div>
     </section>
-    <article class="prose">
-<p><strong>App:</strong> Nudge <strong>Last updated:</strong> June 16, 2026</p>
-<p>Welcome to Nudge. These Terms of Use ("Terms") are a simple agreement between you and Nam Le ("we," "us"), the individual who provides the app. Please read them. By using Nudge, you agree to these Terms.</p>
-<h2>1. Acceptance</h2>
-<p>By downloading, accessing, or using Nudge, you agree to be bound by these Terms and by our Privacy Policy. If you do not agree, please do not use the app.</p>
-<h2>2. License to use the app</h2>
-<p>We grant you a personal, limited, non-exclusive, non-transferable, revocable license to use Nudge on devices you own or control, for your own personal planning. We retain all rights, title, and interest in the app and its software.</p>
-<h2>3. Acceptable use</h2>
-<p>You agree not to:</p>
-<ul>
-<li>Use the app for any unlawful purpose or in violation of these Terms.</li>
-<li>Reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of the app, except where this restriction is prohibited by law.</li>
-<li>Interfere with, disrupt, overload, or attempt to gain unauthorized access to the app, our providers, or other users' data.</li>
-<li>Abuse, probe, or attempt to circumvent the app's security or access controls.</li>
-<li>Resell, sublicense, or commercially exploit the app without our permission.</li>
-</ul>
-<h2>4. A planning aid, not professional advice</h2>
-<p>Nudge is a daily-planning aid. It uses AI to interpret what you say and to help organize your schedule, and AI can make mistakes. The app does <strong>not</strong> provide medical, legal, financial, or other professional advice. You are responsible for reviewing your schedule and for any decisions you make. Do not rely on the app for anything safety-critical or time-critical without checking it yourself.</p>
-<h2>5. "As is," no warranty</h2>
-<p>The app is provided <strong>"as is" and "as available," without warranties of any kind</strong>, whether express or implied, including any implied warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that the app will be uninterrupted, error-free, or that reminders will always be delivered on time.</p>
-<h2>6. Limitation of liability</h2>
-<p>To the fullest extent permitted by law, Nudge will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, missed events, or lost opportunities, arising out of or relating to your use of (or inability to use) the app. To the extent any liability cannot be excluded, it is limited to the amount you paid us for the app in the twelve months before the claim, which may be zero.</p>
-<h2>7. Termination</h2>
-<p>You may stop using the app at any time and delete your account and all your data via <strong>Profile → Delete account</strong>. We may suspend or terminate your access if you violate these Terms or to comply with the law. On termination, your license to use the app ends.</p>
-<h2>8. Changes to these Terms</h2>
-<p>We may update these Terms from time to time. When we make a material change, we will update the <strong>"Last updated"</strong> date below. Your continued use of the app after a change means you accept the updated Terms.</p>
-<h2>9. Governing law</h2>
-<p>These Terms are governed by the laws of the State of Washington, United States, without regard to its conflict-of-laws rules.</p>
-<h2>10. Contact</h2>
-<p>Questions about these Terms? email us at <a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a>.</p>
-<hr />
-<p><strong>Last updated:</strong> June 16, 2026</p>
-    </article>
+
+    <div class="doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#s1">1. Acceptance</a></li>
+          <li><a href="#s2">2. License to use the app</a></li>
+          <li><a href="#s3">3. Acceptable use</a></li>
+          <li><a href="#s4">4. A planning aid, not advice</a></li>
+          <li><a href="#s5">5. "As is," no warranty</a></li>
+          <li><a href="#s6">6. Limitation of liability</a></li>
+          <li><a href="#s7">7. Termination</a></li>
+          <li><a href="#s8">8. Changes to these Terms</a></li>
+          <li><a href="#s9">9. Governing law</a></li>
+          <li><a href="#s10">10. Contact</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose">
+        <p class="lead" data-reveal>Welcome to Nudge. These Terms of Use ("Terms") are a simple agreement between you and Nam Le ("we," "us"), the individual who provides the app. Please read them. By using Nudge, you agree to these Terms.</p>
+
+        <h2 id="s1" data-reveal>1. Acceptance</h2>
+        <p>By downloading, accessing, or using Nudge, you agree to be bound by these Terms and by our Privacy Policy. If you do not agree, please do not use the app.</p>
+
+        <h2 id="s2" data-reveal>2. License to use the app</h2>
+        <p>We grant you a personal, limited, non-exclusive, non-transferable, revocable license to use Nudge on devices you own or control, for your own personal planning. We retain all rights, title, and interest in the app and its software.</p>
+
+        <h2 id="s3" data-reveal>3. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the app for any unlawful purpose or in violation of these Terms.</li>
+          <li>Reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of the app, except where this restriction is prohibited by law.</li>
+          <li>Interfere with, disrupt, overload, or attempt to gain unauthorized access to the app, our providers, or other users' data.</li>
+          <li>Abuse, probe, or attempt to circumvent the app's security or access controls.</li>
+          <li>Resell, sublicense, or commercially exploit the app without our permission.</li>
+        </ul>
+
+        <h2 id="s4" data-reveal>4. A planning aid, not professional advice</h2>
+        <p>Nudge is a daily-planning aid. It uses AI to interpret what you say and to help organize your schedule, and AI can make mistakes. The app does <strong>not</strong> provide medical, legal, financial, or other professional advice. You are responsible for reviewing your schedule and for any decisions you make. Do not rely on the app for anything safety-critical or time-critical without checking it yourself.</p>
+
+        <h2 id="s5" data-reveal>5. "As is," no warranty</h2>
+        <p>The app is provided <strong>"as is" and "as available," without warranties of any kind</strong>, whether express or implied, including any implied warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that the app will be uninterrupted, error-free, or that reminders will always be delivered on time.</p>
+
+        <h2 id="s6" data-reveal>6. Limitation of liability</h2>
+        <p>To the fullest extent permitted by law, Nudge will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, missed events, or lost opportunities, arising out of or relating to your use of (or inability to use) the app. To the extent any liability cannot be excluded, it is limited to the amount you paid us for the app in the twelve months before the claim, which may be zero.</p>
+
+        <h2 id="s7" data-reveal>7. Termination</h2>
+        <p>You may stop using the app at any time and delete your account and all your data via <strong>Profile → Delete account</strong>. We may suspend or terminate your access if you violate these Terms or to comply with the law. On termination, your license to use the app ends.</p>
+
+        <h2 id="s8" data-reveal>8. Changes to these Terms</h2>
+        <p>We may update these Terms from time to time. When we make a material change, we will update the <strong>"Last updated"</strong> date below. Your continued use of the app after a change means you accept the updated Terms.</p>
+
+        <h2 id="s9" data-reveal>9. Governing law</h2>
+        <p>These Terms are governed by the laws of the State of Washington, United States, without regard to its conflict-of-laws rules.</p>
+
+        <h2 id="s10" data-reveal>10. Contact</h2>
+        <div class="callout">
+          <p>Questions about these Terms? Email us at <a class="ink-underline" href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a>.</p>
+        </div>
+
+        <hr />
+        <p><strong>Last updated:</strong> <span class="t-num">June 16, 2026</span></p>
+      </article>
+    </div>
+
     <div class="prose-foot">
       <a href="index.html"><span aria-hidden="true">&larr;</span> Back to home</a>
     </div>
-
   </main>
 
   <footer class="site-footer">
+    <div class="footer-rail" aria-hidden="true"></div>
     <div class="container">
       <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="Nudge — home">
-          <img src="assets/icon.png" alt="" width="32" height="32" />
+          <img src="assets/favicon-32.png" alt="" width="32" height="32" />
           <span>Nudge</span>
         </a>
         <p>A voice-first daily planner. Say what you want your day to look like — Nudge does the scheduling.</p>
+        <span class="soon">Coming soon to iOS.</span>
       </div>
       <nav class="footer-col" aria-label="Product">
         <h4>Product</h4>
         <ul>
           <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#how-title">How it works</a></li>
-          <li><a href="index.html#privacy">Privacy</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="support.html">Support</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="Legal and help">
         <h4>Legal &amp; help</h4>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="mailto:nudgeplannerapp@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -135,5 +181,7 @@
       </div>
     </div>
   </footer>
+
+  <script defer src="main.js"></script>
 </body>
 </html>

@@ -7,13 +7,17 @@
   <title>Nudge — Plan your day by voice</title>
   <meta name="description" content="Nudge is a voice-first daily planner. Say what you want your day to look like, and Nudge turns it into a scheduled day — no fiddly forms. Private by design, with on-device transcription." />
   <link rel="canonical" href="https://namle05.github.io/nudge-site/" />
-  <meta name="theme-color" content="#5E72E4" />
-  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#5E72E4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0C0E22" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
 
   <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512" />
   <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="sitemap.xml" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -36,49 +40,74 @@
   <!-- Fonts: Fraunces (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..600&family=Inter:wght@400;500;550;600;650;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;550;600;650;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Honest structured data: no rating, no price, iOS, pre-launch -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Nudge",
+    "applicationCategory": "Productivity",
+    "operatingSystem": "iOS",
+    "description": "A voice-first daily planner. Say what you want your day to look like, and Nudge turns it into a scheduled day.",
+    "url": "https://namle05.github.io/nudge-site/",
+    "author": { "@type": "Person", "name": "Nam Le" }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-bar" aria-hidden="true"></div>
 
   <header class="site-header">
+    <span class="nav-sentinel" aria-hidden="true"></span>
     <div class="container">
       <a class="brand" href="index.html" aria-label="Nudge — home">
-        <img src="assets/icon.png" alt="" width="32" height="32" />
+        <img src="assets/favicon-32.png" alt="" width="32" height="32" />
         <span>Nudge</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a class="nav-secondary" href="#features">Features</a>
+        <a class="nav-secondary" href="#how">How it works</a>
         <a class="nav-secondary" href="#privacy">Privacy</a>
         <a class="nav-secondary" href="support.html">Support</a>
-        <a class="nav-cta" href="#get-started">Get started</a>
+        <a class="nav-cta" href="support.html">Get in touch</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+
+    <!-- ===================== S1 · HERO ===================== -->
+    <section class="hero grain" aria-labelledby="hero-title">
+      <div class="hero-grid blueprint" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-copy">
-          <span class="eyebrow rise"><span class="dot" aria-hidden="true"></span> Voice-first daily planner</span>
-          <h1 id="hero-title" class="rise d1">
+          <span class="eyebrow" data-reveal>
+            <span class="dot" aria-hidden="true"></span> Voice-first daily planner
+          </span>
+          <h1 id="hero-title" data-reveal style="--reveal-delay:60ms">
             Plan your day <span class="hl">by voice.</span>
           </h1>
-          <p class="lede rise d2">
+          <p class="lede" data-reveal style="--reveal-delay:120ms">
             Nudge turns what you say into a scheduled day. Speak the way you
             think — “move my run to 7&nbsp;a.m., add a 30-minute focus block
             after lunch” — and watch your plan rearrange itself.
           </p>
-          <div class="cta-row rise d3" id="get-started">
-            <a class="btn btn-primary" href="support.html">
+          <div class="cta-row" id="get-started" data-reveal style="--reveal-delay:180ms">
+            <a class="btn btn-primary magnetic" href="support.html">
               Get in touch <span class="arrow" aria-hidden="true">&rarr;</span>
             </a>
-            <a class="btn btn-ghost" href="#features">See how it works</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
           </div>
-          <p class="reassure rise d3">
+          <p class="honest" data-reveal style="--reveal-delay:220ms">
+            Coming soon to iOS —
+            <a href="mailto:nudgeplannerapp@gmail.com">email us to get notified.</a>
+          </p>
+          <p class="reassure" data-reveal style="--reveal-delay:260ms">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
               <path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,47 +116,17 @@
           </p>
         </div>
 
-        <!-- Pure-CSS phone mockup -->
-        <div class="hero-visual rise d2" aria-hidden="true">
-          <div class="phone">
+        <!-- Crafted product UI — the real Nudge surface (CSS/SVG, no stock) -->
+        <div class="hero-visual" data-reveal style="--reveal-delay:140ms" aria-hidden="true">
+          <div class="phone" id="hero-phone">
             <div class="phone-screen">
-              <div class="phone-day">Tuesday · June 16</div>
-              <div class="phone-title">Today</div>
-
-              <div class="task done">
-                <span class="stripe teal"></span>
-                <span class="tick"></span>
-                <span class="body">
-                  <span class="t-name">Morning walk</span>
-                  <span class="t-time">7:00 AM · 30 min</span>
-                </span>
-              </div>
-              <div class="task">
-                <span class="stripe deep"></span>
-                <span class="tick"></span>
-                <span class="body">
-                  <span class="t-name">Deep work — thesis draft</span>
-                  <span class="t-time">9:30 AM · 90 min</span>
-                </span>
-              </div>
-              <div class="task">
-                <span class="stripe"></span>
-                <span class="tick"></span>
-                <span class="body">
-                  <span class="t-name">Lunch with Priya</span>
-                  <span class="t-time">12:30 PM · 1 hr</span>
-                </span>
-              </div>
-              <div class="task">
-                <span class="stripe teal"></span>
-                <span class="tick"></span>
-                <span class="body">
-                  <span class="t-name">Focus block</span>
-                  <span class="t-time">2:00 PM · 30 min</span>
-                </span>
+              <div class="phone-head">
+                <div>
+                  <div class="phone-day">Today · Tue</div>
+                  <div class="phone-title">June 20</div>
+                </div>
               </div>
 
-              <p class="phone-quote">“Push my focus block to <b>2&nbsp;pm</b> and add a short walk before dinner.”</p>
               <div class="phone-mic">
                 <span class="mic-dot">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -136,6 +135,55 @@
                   </svg>
                 </span>
                 <span>Listening…</span>
+                <span class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+              </div>
+
+              <div class="phone-section">Morning</div>
+              <div class="phone-list">
+                <div class="task" id="task-run">
+                  <span class="stripe active"></span>
+                  <span class="tick"></span>
+                  <span class="body">
+                    <span class="t-name">Morning run</span>
+                    <span class="t-time retime" id="run-time">8:00 AM · 30 min</span>
+                  </span>
+                  <span class="grip" aria-hidden="true"><i></i><i></i><i></i></span>
+                </div>
+                <div class="task done">
+                  <span class="stripe teal"></span>
+                  <span class="tick" id="walk-tick"></span>
+                  <span class="body">
+                    <span class="t-name">Breakfast</span>
+                    <span class="t-time">8:45 AM · 20 min</span>
+                  </span>
+                  <span class="grip" aria-hidden="true"><i></i><i></i><i></i></span>
+                </div>
+              </div>
+
+              <div class="phone-section">Afternoon</div>
+              <div class="phone-list">
+                <div class="task slide-in" id="task-focus">
+                  <span class="stripe active"></span>
+                  <span class="tick"></span>
+                  <span class="body">
+                    <span class="t-name">Focus block</span>
+                    <span class="t-time">1:00 PM · 30 min</span>
+                  </span>
+                  <span class="grip" aria-hidden="true"><i></i><i></i><i></i></span>
+                </div>
+              </div>
+
+              <div class="phone-foot">
+                <p class="transcript-chip" id="transcript">
+                  <span id="transcript-text">Push my run to 7 a.m. and add a focus block after lunch.</span><span class="caret" aria-hidden="true"></span>
+                </p>
+                <span class="undo-chip">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 14l-4-4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 10h9a5 5 0 0 1 0 10h-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Undo
+                </span>
               </div>
             </div>
           </div>
@@ -143,160 +191,176 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- ===================== S2 · FEATURES ===================== -->
     <section class="section" id="features" aria-labelledby="features-title">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Why Nudge</p>
-          <h2 id="features-title">A planner that listens, then does the arranging.</h2>
-          <p>
+          <p class="kicker" data-reveal><span class="rail-cap" aria-hidden="true"></span> Why Nudge</p>
+          <h2 id="features-title" data-reveal style="--reveal-delay:60ms">A planner that listens.</h2>
+          <p class="intro" data-reveal style="--reveal-delay:120ms">
             Most planners ask you to tap through forms — date, time, duration,
-            repeat. Nudge flips that around. You talk; it schedules. Three things
-            make that feel effortless.
+            repeat. Nudge flips that around. You talk; it schedules.
           </p>
         </div>
 
-        <div class="features">
-          <article class="feature">
-            <span class="glyph" aria-hidden="true">
+        <div class="bento" data-reveal-group>
+          <article class="card b-primary" data-reveal>
+            <span class="glow" aria-hidden="true"></span>
+            <span class="feat-glyph" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <rect x="9" y="2.5" width="6" height="12" rx="3" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="9" y="2.5" width="6" height="12" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
             <h3>Voice-first planning</h3>
             <p>
-              Tap the mic and describe your day in plain language. Nudge
-              understands what you mean — creating, moving, shortening and
-              clearing tasks — and your schedule updates as you speak. Prefer to
-              type? You can do that too.
+              Tap the mic and describe your day in plain language. Nudge creates,
+              moves, shortens, or clears tasks live as you speak — and you can
+              always type instead.
             </p>
+            <div class="mini-day" aria-hidden="true">
+              <span class="mini-row"><span class="dot-s"></span> Deep work — thesis draft <span class="m-time">9:30</span></span>
+              <span class="mini-row"><span class="dot-s teal"></span> Lunch with Priya <span class="m-time">12:30</span></span>
+              <span class="mini-row"><span class="dot-s"></span> Focus block <span class="m-time">14:00</span></span>
+            </div>
           </article>
 
-          <article class="feature teal">
-            <span class="glyph" aria-hidden="true">
+          <article class="card teal b-1" data-reveal style="--reveal-delay:80ms">
+            <span class="glow" aria-hidden="true"></span>
+            <span class="feat-glyph" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21s-7-4.4-7-9.7A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7 4.3C19 16.6 12 21 12 21z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M12 7V3.5M9.5 5.2 12 7l2.5-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 21s-7-4.4-7-9.7A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7 4.3C19 16.6 12 21 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7V3.5M9.5 5.2 12 7l2.5-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
             <h3>It learns your routine</h3>
             <p>
-              The more you plan, the better it fits you. Nudge quietly picks up
-              how long your usual tasks tend to take and the rhythms you prefer,
-              so when you leave out a detail it fills in a sensible default —
-              and slides things to a free slot when they’d collide.
+              Nudge picks up your typical durations and rhythms, fills in sensible
+              defaults, and slides colliding items to the next free slot.
             </p>
           </article>
 
-          <article class="feature">
-            <span class="glyph" aria-hidden="true">
+          <article class="card b-2" data-reveal style="--reveal-delay:160ms">
+            <span class="glow" aria-hidden="true"></span>
+            <span class="feat-glyph" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <circle cx="12" cy="15.4" r="1.4" fill="currentColor"/>
+                <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
             <h3>Private by design</h3>
             <p>
-              Your speech is transcribed right on your device — the raw audio
-              never leaves your phone. Only the text of what you said is sent on
-              to interpret your plan. No analytics, no ad trackers, nothing sold.
+              Your speech is transcribed on your device — raw audio never leaves
+              your phone, and only the text is sent on. No analytics, no ad
+              trackers, nothing sold.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="section band" aria-labelledby="how-title">
+    <!-- ===================== S3 · HOW IT WORKS ===================== -->
+    <section class="section" id="how" aria-labelledby="how-title">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker">How it works</p>
-          <h2 id="how-title">From a sentence to a scheduled day.</h2>
-          <p>No setup ritual. Open the app, speak, and you’re planned.</p>
-        </div>
+        <div class="hiw">
+          <div class="hiw-intro">
+            <p class="kicker" data-reveal><span class="rail-cap" aria-hidden="true"></span> How it works</p>
+            <h2 id="how-title" class="section-head" data-reveal style="--reveal-delay:60ms">From a sentence to a scheduled day.</h2>
+            <p class="intro" data-reveal style="--reveal-delay:120ms">No setup ritual. Open the app, speak, and you’re planned.</p>
+          </div>
 
-        <ol class="steps" role="list">
-          <li class="step">
-            <h3>Say it out loud</h3>
-            <p>
-              Hold the mic and talk through your day, or just one change.
-              Natural phrasing is fine — times, durations, “tomorrow”, “after
-              lunch”, “every weekday”.
-            </p>
-          </li>
-          <li class="step">
-            <h3>Nudge arranges it</h3>
-            <p>
-              It reads your existing tasks and learned preferences, then creates,
-              updates or clears items to match — resolving clashes by sliding to
-              the next free slot.
-            </p>
-          </li>
-          <li class="step">
-            <h3>Glance and go</h3>
-            <p>
-              Your day appears as a clean morning/afternoon/evening list. Drag to
-              fine-tune, or undo the last change with a tap if it wasn’t quite
-              what you meant.
-            </p>
-          </li>
-        </ol>
+          <ol class="hiw-panels" role="list">
+            <li class="hiw-panel" data-reveal>
+              <span class="num" aria-hidden="true">01</span>
+              <h3>Say it out loud</h3>
+              <p>Hold the mic and talk through your day the way you’d tell a friend.</p>
+            </li>
+            <li class="hiw-panel" data-reveal style="--reveal-delay:80ms">
+              <span class="num" aria-hidden="true">02</span>
+              <h3>Nudge arranges it</h3>
+              <p>It reads your existing tasks and learned preferences, then resolves any clashes by sliding items to the next free slot.</p>
+            </li>
+            <li class="hiw-panel" data-reveal style="--reveal-delay:160ms">
+              <span class="num" aria-hidden="true">03</span>
+              <h3>Glance and go</h3>
+              <p>Your day appears as a clean morning, afternoon, and evening list. Drag to fine-tune, and undo any change with one tap.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <!-- PRIVACY -->
+    <!-- ===================== S4 · THINGS YOU CAN SAY ===================== -->
+    <section class="section" aria-labelledby="say-title">
+      <div class="container">
+        <p class="kicker" data-reveal><span class="rail-cap" aria-hidden="true"></span> Say it your way</p>
+        <h2 id="say-title" class="section-head" data-reveal style="--reveal-delay:60ms">Things you can say.</h2>
+      </div>
+      <div class="container">
+        <div class="say-rail" role="list" tabindex="0" aria-label="Examples of what you can say to Nudge — scroll for more">
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Block 9–11 for thesis writing.”</p></div>
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Add a short walk before dinner.”</p></div>
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Every weekday, 7 a.m. gym.”</p></div>
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Move lunch to 1 and shorten it.”</p></div>
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Clear my evening.”</p></div>
+          <div class="say-card" role="listitem"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 8h8M8 12h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14v12H9l-4 4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><p>“Push my run to 7 a.m.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== S5 · PRIVACY ===================== -->
     <section class="section" id="privacy" aria-labelledby="privacy-title">
       <div class="container">
-        <div class="assurance">
-          <div class="card">
-            <span class="lock" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="#fff" stroke-width="1.7"/>
-                <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
-                <circle cx="12" cy="15.4" r="1.4" fill="#fff"/>
+        <div class="privacy-grid">
+          <div class="privacy-statement">
+            <p class="kicker" data-reveal><span class="rail-cap" aria-hidden="true"></span> Built private</p>
+            <span class="shield" data-draw aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path class="draw" pathLength="1" d="M8.5 12l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <h2 id="privacy-title">Privacy isn’t a setting. It’s the design.</h2>
-            <p>
-              We built Nudge to collect as little as possible: your account, the
-              tasks you create, and the preferences it learns to help you plan.
-              That’s it. No advertising, no third-party trackers, and your data
-              is never sold or shared.
+            <h2 id="privacy-title" data-reveal style="--reveal-delay:60ms">Privacy isn’t a setting. It’s the design.</h2>
+            <p data-reveal style="--reveal-delay:120ms">
+              Your voice is transcribed on your device. The raw audio never leaves
+              your phone — only the text of what you said is sent on to plan your day.
             </p>
-            <p>
-              Read the full <a href="privacy.html">Privacy Policy</a> or the
-              <a href="terms.html">Terms of Use</a>.
+            <p data-reveal style="--reveal-delay:160ms">
+              There are no analytics or ad trackers, nothing is sold or shared, and
+              your data is isolated to your account.
+            </p>
+            <p class="privacy-links" data-reveal style="--reveal-delay:200ms">
+              <a class="ink-underline" href="privacy.html">Read the privacy policy</a>
+              <a class="ink-underline" href="terms.html">Read the terms</a>
             </p>
           </div>
 
-          <ul class="checklist" role="list">
-            <li>
+          <ul class="checklist panel" role="list" data-reveal-group>
+            <li data-reveal>
               <span class="ck" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
               <div>
-                <h3>Your voice stays on your phone</h3>
-                <p>Speech is transcribed on-device; the raw audio is never uploaded to us or anyone else.</p>
+                <h3>Your voice stays on your phone.</h3>
+                <p>Speech is transcribed on-device; raw audio is never uploaded to us or anyone else.</p>
               </div>
             </li>
-            <li>
+            <li data-reveal style="--reveal-delay:80ms">
               <span class="ck" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
               <div>
-                <h3>No analytics or ad trackers</h3>
-                <p>There are no advertising or tracking SDKs in the app, and no cross-app tracking.</p>
+                <h3>No analytics or ad trackers — and no cross-app tracking.</h3>
+                <p>There are no advertising or tracking SDKs in the app.</p>
               </div>
             </li>
-            <li>
+            <li data-reveal style="--reveal-delay:160ms">
               <span class="ck" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
               <div>
-                <h3>Your data is isolated and yours</h3>
-                <p>Row-Level Security means only you can read or write your rows. Delete everything anytime from Profile.</p>
+                <h3>Your data is isolated with Row-Level Security.</h3>
+                <p>Only you can read or write your rows, and you can delete everything anytime from Profile.</p>
               </div>
             </li>
           </ul>
@@ -304,50 +368,53 @@
       </div>
     </section>
 
-    <!-- CLOSING CTA -->
-    <section class="section cta-band" aria-labelledby="cta-title">
+    <!-- ===================== S6 · CLOSING CTA ===================== -->
+    <section class="section cta-band grain" aria-labelledby="cta-title">
       <div class="container">
         <div class="inner">
-          <h2 id="cta-title">Let your day plan itself.</h2>
-          <p>
+          <p class="kicker" data-reveal><span class="rail-cap" aria-hidden="true"></span> Ready when you are</p>
+          <h2 id="cta-title" data-reveal style="--reveal-delay:60ms">Let your day <span class="hl">plan itself.</span></h2>
+          <p data-reveal style="--reveal-delay:120ms">
             Speak your intentions; Nudge keeps the schedule. Questions before you
             start? We’re a real person away.
           </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="support.html">
-              Contact support <span class="arrow" aria-hidden="true">&rarr;</span>
+          <div class="cta-row" data-reveal style="--reveal-delay:180ms">
+            <a class="btn btn-primary magnetic" href="support.html">
+              Get in touch <span class="arrow" aria-hidden="true">&rarr;</span>
             </a>
             <a class="btn btn-ghost" href="privacy.html">Read the privacy policy</a>
           </div>
+          <p class="honest" data-reveal style="--reveal-delay:220ms">Coming soon to iOS.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <div class="footer-rail" aria-hidden="true"></div>
     <div class="container">
       <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="Nudge — home">
-          <img src="assets/icon.png" alt="" width="32" height="32" />
+          <img src="assets/favicon-32.png" alt="" width="32" height="32" />
           <span>Nudge</span>
         </a>
         <p>A voice-first daily planner. Say what you want your day to look like — Nudge does the scheduling.</p>
+        <span class="soon">Coming soon to iOS.</span>
       </div>
       <nav class="footer-col" aria-label="Product">
         <h4>Product</h4>
         <ul>
           <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#how-title">How it works</a></li>
-          <li><a href="index.html#privacy">Privacy</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="support.html">Support</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="Legal and help">
         <h4>Legal &amp; help</h4>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="mailto:nudgeplannerapp@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -358,5 +425,7 @@
       </div>
     </div>
   </footer>
+
+  <script defer src="main.js"></script>
 </body>
 </html>

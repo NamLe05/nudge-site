@@ -7,13 +7,19 @@
   <title>Privacy Policy — Nudge</title>
   <meta name="description" content="How Nudge handles your data: privacy-first, on-device voice transcription, no ads or tracking, and your data never sold." />
   <link rel="canonical" href="https://namle05.github.io/nudge-site/privacy.html" />
-  <meta name="theme-color" content="#5E72E4" />
-  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#5E72E4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0C0E22" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
 
+  <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512" />
   <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Nudge" />
   <meta property="og:title" content="Privacy Policy — Nudge" />
@@ -24,32 +30,37 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Nudge — plan your day by voice." />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Privacy Policy — Nudge" />
   <meta name="twitter:description" content="How Nudge handles your data: privacy-first, on-device voice transcription, no ads or tracking, and your data never sold." />
   <meta name="twitter:image" content="https://namle05.github.io/nudge-site/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Nudge — plan your day by voice." />
 
+  <!-- Fonts: Fraunces (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..600&family=Inter:wght@400;500;550;600;650;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;550;600;650;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-bar" aria-hidden="true"></div>
 
   <header class="site-header">
+    <span class="nav-sentinel" aria-hidden="true"></span>
     <div class="container">
       <a class="brand" href="index.html" aria-label="Nudge — home">
-        <img src="assets/icon.png" alt="" width="32" height="32" />
+        <img src="assets/favicon-32.png" alt="" width="32" height="32" />
         <span>Nudge</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a class="nav-secondary" href="index.html#features">Features</a>
-        <a class="nav-secondary" href="privacy.html">Privacy</a>
+        <a class="nav-secondary" href="index.html#how">How it works</a>
+        <a class="nav-secondary" href="index.html#privacy">Privacy</a>
         <a class="nav-secondary" href="support.html">Support</a>
-        <a class="nav-cta" href="index.html">Open Nudge</a>
+        <a class="nav-cta" href="support.html">Get in touch</a>
       </nav>
     </div>
   </header>
@@ -57,151 +68,189 @@
   <main id="main">
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
-        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Legal</span>
-        <h1 id="page-title">Privacy Policy</h1>
-        <div class="meta"><span><b>App:</b> Nudge</span><span><b>Last updated:</b> June 16, 2026</span></div>
+        <span class="eyebrow" data-reveal><span class="dot" aria-hidden="true"></span> Legal</span>
+        <h1 id="page-title" data-reveal style="--reveal-delay:60ms">Privacy Policy</h1>
+        <div class="meta" data-reveal style="--reveal-delay:120ms">
+          <span><b>App:</b> Nudge</span>
+          <span><b>Last updated:</b> <span class="t-num">June 16, 2026</span></span>
+          <span><b>Rated:</b> 4+</span>
+        </div>
       </div>
     </section>
-    <article class="prose">
-<p><strong>App:</strong> Nudge <strong>Last updated:</strong> June 16, 2026</p>
-<p>We built Nudge to help you plan your day by speaking or typing, without filling in forms. We take a privacy-first approach: we collect as little as possible, we do not sell your data, and we do not use advertising or tracking. This policy explains, in plain language, what we collect, why, and the choices you have.</p>
-<h2>1. Who we are and how to contact us</h2>
-<p>Nudge is provided by Nam Le, an individual operating from the United States. There is no company entity — the person responsible for your data (the "data controller") is Nam Le.</p>
-<p>If you have any question about your privacy or this policy, email us:</p>
-<ul>
-<li><strong>Email:</strong> <a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
-</ul>
-<h2>2. Information we collect, and why</h2>
-<p>We only collect what we need to make the app work for you.</p>
-<p><strong>Account information</strong></p>
-<ul>
-<li>Your <strong>email address</strong> and a <strong>display name</strong>, handled through our authentication provider (Supabase Auth).</li>
-<li>We use this to create and secure your account, sign you in, and send you essential account messages (for example, the one-time code to confirm your email at sign-up).</li>
-</ul>
-<p><strong>Your content</strong></p>
-<ul>
-<li>The <strong>tasks and calendar items</strong> you create.</li>
-<li><strong>Learned scheduling preferences</strong> — the constraints and typical routine durations the app picks up from how you plan, so it can suggest better times and lengths.</li>
-<li>An <strong>action journal</strong> — a short record of recent changes that powers the in-app undo feature.</li>
-</ul>
-<p>We use this content solely to provide the planning features you asked for: showing your schedule, applying your preferences, and letting you undo a recent change.</p>
-<p><strong>Voice you choose to speak</strong></p>
-<ul>
-<li>When you tap the microphone, the app captures audio so it can understand what you said. See "How voice works" below for the important detail: that audio is processed <strong>on your device</strong> and is <strong>not</strong> sent to us or to anyone else.</li>
-</ul>
-<p>We do <strong>not</strong> create advertising profiles, and we do <strong>not</strong> track you across other apps or websites.</p>
-<h2>3. What we do NOT collect</h2>
-<p>We want to be just as clear about what we leave alone:</p>
-<ul>
-<li><strong>No raw voice recordings leave your phone.</strong> We do not store or transmit your audio.</li>
-<li><strong>No location data.</strong></li>
-<li><strong>No contacts, photos, or media library access.</strong></li>
-<li><strong>No health or fitness data.</strong></li>
-<li><strong>No third-party analytics, advertising, tracking, or crash-reporting tools.</strong> There are no ad or analytics SDKs in the app.</li>
-<li><strong>No selling or sharing of your data for advertising</strong>, ever.</li>
-<li><strong>No cross-app tracking.</strong> Because we do not track you across other companies' apps or sites, the app does not show Apple's App Tracking Transparency prompt.</li>
-</ul>
-<h2>4. How voice works (on-device transcription)</h2>
-<p>This is the part we are proudest of.</p>
-<ol>
-<li>You tap the microphone and speak.</li>
-<li>Your speech is transcribed <strong>entirely on your device</strong> using an on-device speech model (Moonshine ASR). The <strong>raw audio never leaves your phone</strong> — it is not uploaded to us or to any third party.</li>
-<li>Only the resulting <strong>text transcript</strong> is sent onward, to Google's Gemini API, so the AI can interpret your plan (for example, turning "move my run to 7am tomorrow" into the right calendar change).</li>
-</ol>
-<p>In short: your voice stays on your device; only the typed-out meaning of what you said is sent to be understood.</p>
-<h2>5. Subprocessors (who helps us run the service)</h2>
-<p>We rely on two service providers ("subprocessors") to operate the app. We share only what is necessary, as described above.</p>
-<p><strong>Supabase — hosting, authentication, and database</strong></p>
-<ul>
-<li>Stores your account and content data and handles sign-in.</li>
-<li>Data is hosted in the United States (us-east-1).</li>
-<li>Each user's data is isolated using database Row-Level Security (see Security below).</li>
-</ul>
-<p><strong>Google Gemini API — interpreting your plan</strong></p>
-<ul>
-<li>Receives the <strong>text transcript</strong> of what you said (or typed) so it can work out the calendar changes you want.</li>
-<li>We use Gemini on a <strong>paid API tier</strong>. Under Google's paid API terms, the prompts we send and the responses we receive are <strong>not used to train Google's models</strong> and are <strong>not reviewed by humans for training purposes</strong>. This is the strong privacy posture we have deliberately chosen.</li>
-</ul>
-<h2>6. Where your data is stored, and how we protect it</h2>
-<ul>
-<li><strong>Location:</strong> your account and content data are stored with Supabase in the United States (us-east-1).</li>
-<li><strong>In transit:</strong> all communication between the app and our providers is encrypted using TLS.</li>
-<li><strong>Isolation:</strong> your data is protected by <strong>Row-Level Security (RLS)</strong>, which enforces that one user can only ever read or write their own rows. You cannot see anyone else's data, and they cannot see yours.</li>
-</ul>
-<p>No method of storage or transmission is ever 100% secure, but we use industry-standard protections and minimize what we hold in the first place.</p>
-<h2>7. Data retention and deletion</h2>
-<p>We keep your account and content data for as long as your account exists, so the app can show you your plan and remember your preferences.</p>
-<p>You are always in control, and you can delete everything yourself:</p>
-<ul>
-<li><strong>In the app, go to Profile → Delete account.</strong></li>
-<li>You will be asked to confirm. This is <strong>permanent and cannot be undone.</strong></li>
-<li>Deletion removes your account <strong>and all associated data</strong> — tasks, learned preferences, and your action journal.</li>
-<li>Your account and all associated data are <strong>deleted immediately and permanently</strong> when you confirm — this <strong>cannot be undone</strong>.</li>
-</ul>
-<p>If you ever have trouble deleting your data from within the app, email us at <a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a> and we will take care of it.</p>
-<h2>8. Your privacy rights</h2>
-<p>You have rights over your personal data, and we honor them regardless of where you live. Across the board: <strong>we do not sell or share your personal information</strong>, and we do not use it for cross-context behavioral advertising.</p>
-<p><strong>If you are in California (CCPA/CPRA)</strong></p>
-<p>You have the right to:</p>
-<ul>
-<li><strong>Know</strong> what personal information we collect and how we use it (this policy describes it).</li>
-<li><strong>Access</strong> a copy of your personal information.</li>
-<li><strong>Delete</strong> your personal information (use Profile → Delete account, or email us).</li>
-<li><strong>Correct</strong> inaccurate personal information.</li>
-<li><strong>Opt out of sale or sharing</strong> — though there is nothing to opt out of, because we never sell or share your data.</li>
-<li><strong>Not be discriminated against</strong> for exercising any of these rights.</li>
-</ul>
-<p><strong>If you are in the EEA or the UK (GDPR)</strong></p>
-<p>You have the right to:</p>
-<ul>
-<li><strong>Access</strong> your personal data.</li>
-<li><strong>Rectify</strong> (correct) inaccurate data.</li>
-<li><strong>Erase</strong> your data ("right to be forgotten").</li>
-<li><strong>Restrict</strong> or <strong>object</strong> to certain processing.</li>
-<li><strong>Data portability</strong> — receive your data in a usable format.</li>
-<li><strong>Lodge a complaint</strong> with your local data protection authority.</li>
-</ul>
-<p>Our legal bases for processing are: performing our contract with you (providing the app), and your consent (for example, when you choose to use the microphone).</p>
-<p>To exercise any right, email us at <a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a>. You can also delete everything yourself at any time via Profile → Delete account.</p>
-<h2>9. Children's privacy</h2>
-<p>Nudge is <strong>not directed to children under 13</strong>, and the app is rated <strong>4+</strong> for general audiences. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, email us at <a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a> and we will delete it.</p>
-<h2>10. Changes to this policy</h2>
-<p>We may update this policy from time to time — for example, if we add a feature or change a provider. When we make a material change, we will update the <strong>"Last updated"</strong> date above and, where appropriate, notify you in the app. Please review this page periodically.</p>
-<h2>11. Governing law</h2>
-<p>This Privacy Policy is governed by the laws of the State of Washington, United States, without regard to its conflict-of-laws rules.</p>
-<hr />
-<p><strong>Last updated:</strong> June 16, 2026</p>
-    </article>
+
+    <div class="doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#s1">1. Who we are &amp; contact</a></li>
+          <li><a href="#s2">2. What we collect</a></li>
+          <li><a href="#s3">3. What we do NOT collect</a></li>
+          <li><a href="#s4">4. How voice works</a></li>
+          <li><a href="#s5">5. Subprocessors</a></li>
+          <li><a href="#s6">6. Storage &amp; security</a></li>
+          <li><a href="#s7">7. Retention &amp; deletion</a></li>
+          <li><a href="#s8">8. Your privacy rights</a></li>
+          <li><a href="#s9">9. Children's privacy</a></li>
+          <li><a href="#s10">10. Changes to this policy</a></li>
+          <li><a href="#s11">11. Governing law</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose">
+        <p class="lead" data-reveal>We built Nudge to help you plan your day by speaking or typing, without filling in forms. We take a privacy-first approach: we collect as little as possible, we do not sell your data, and we do not use advertising or tracking. This policy explains, in plain language, what we collect, why, and the choices you have.</p>
+
+        <h2 id="s1" data-reveal>1. Who we are and how to contact us</h2>
+        <p>Nudge is provided by Nam Le, an individual operating from the United States. There is no company entity — the person responsible for your data (the "data controller") is Nam Le.</p>
+        <p>If you have any question about your privacy or this policy, email us:</p>
+        <ul>
+          <li><strong>Email:</strong> <a class="ink-underline" href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
+        </ul>
+
+        <h2 id="s2" data-reveal>2. Information we collect, and why</h2>
+        <p>We only collect what we need to make the app work for you.</p>
+        <h3>Account information</h3>
+        <ul>
+          <li>Your <strong>email address</strong> and a <strong>display name</strong>, handled through our authentication provider (Supabase Auth).</li>
+          <li>We use this to create and secure your account, sign you in, and send you essential account messages (for example, the one-time code to confirm your email at sign-up).</li>
+        </ul>
+        <h3>Your content</h3>
+        <ul>
+          <li>The <strong>tasks and calendar items</strong> you create.</li>
+          <li><strong>Learned scheduling preferences</strong> — the constraints and typical routine durations the app picks up from how you plan, so it can suggest better times and lengths.</li>
+          <li>An <strong>action journal</strong> — a short record of recent changes that powers the in-app undo feature.</li>
+        </ul>
+        <p>We use this content solely to provide the planning features you asked for: showing your schedule, applying your preferences, and letting you undo a recent change.</p>
+        <h3>Voice you choose to speak</h3>
+        <ul>
+          <li>When you tap the microphone, the app captures audio so it can understand what you said. See "How voice works" below for the important detail: that audio is processed <strong>on your device</strong> and is <strong>not</strong> sent to us or to anyone else.</li>
+        </ul>
+        <p>We do <strong>not</strong> create advertising profiles, and we do <strong>not</strong> track you across other apps or websites.</p>
+
+        <h2 id="s3" data-reveal>3. What we do NOT collect</h2>
+        <p>We want to be just as clear about what we leave alone:</p>
+        <ul>
+          <li><strong>No raw voice recordings leave your phone.</strong> We do not store or transmit your audio.</li>
+          <li><strong>No location data.</strong></li>
+          <li><strong>No contacts, photos, or media library access.</strong></li>
+          <li><strong>No health or fitness data.</strong></li>
+          <li><strong>No third-party analytics, advertising, tracking, or crash-reporting tools.</strong> There are no ad or analytics SDKs in the app.</li>
+          <li><strong>No selling or sharing of your data for advertising</strong>, ever.</li>
+          <li><strong>No cross-app tracking.</strong> Because we do not track you across other companies' apps or sites, the app does not show Apple's App Tracking Transparency prompt.</li>
+        </ul>
+
+        <h2 id="s4" data-reveal>4. How voice works (on-device transcription)</h2>
+        <p>This is the part we are proudest of.</p>
+        <ol>
+          <li>You tap the microphone and speak.</li>
+          <li>Your speech is transcribed <strong>entirely on your device</strong> using an on-device speech model (Moonshine ASR). The <strong>raw audio never leaves your phone</strong> — it is not uploaded to us or to any third party.</li>
+          <li>Only the resulting <strong>text transcript</strong> is sent onward, to Google's Gemini API, so the AI can interpret your plan (for example, turning "move my run to 7am tomorrow" into the right calendar change).</li>
+        </ol>
+        <p>In short: your voice stays on your device; only the typed-out meaning of what you said is sent to be understood.</p>
+
+        <h2 id="s5" data-reveal>5. Subprocessors (who helps us run the service)</h2>
+        <p>We rely on two service providers ("subprocessors") to operate the app. We share only what is necessary, as described above.</p>
+        <h3>Supabase — hosting, authentication, and database</h3>
+        <ul>
+          <li>Stores your account and content data and handles sign-in.</li>
+          <li>Data is hosted in the United States (us-east-1).</li>
+          <li>Each user's data is isolated using database Row-Level Security (see Security below).</li>
+        </ul>
+        <h3>Google Gemini API — interpreting your plan</h3>
+        <ul>
+          <li>Receives the <strong>text transcript</strong> of what you said (or typed) so it can work out the calendar changes you want.</li>
+          <li>We use Gemini on a <strong>paid API tier</strong>. Under Google's paid API terms, the prompts we send and the responses we receive are <strong>not used to train Google's models</strong> and are <strong>not reviewed by humans for training purposes</strong>. This is the strong privacy posture we have deliberately chosen.</li>
+        </ul>
+
+        <h2 id="s6" data-reveal>6. Where your data is stored, and how we protect it</h2>
+        <ul>
+          <li><strong>Location:</strong> your account and content data are stored with Supabase in the United States (us-east-1).</li>
+          <li><strong>In transit:</strong> all communication between the app and our providers is encrypted using TLS.</li>
+          <li><strong>Isolation:</strong> your data is protected by <strong>Row-Level Security (RLS)</strong>, which enforces that one user can only ever read or write their own rows. You cannot see anyone else's data, and they cannot see yours.</li>
+        </ul>
+        <p>No method of storage or transmission is ever 100% secure, but we use industry-standard protections and minimize what we hold in the first place.</p>
+
+        <h2 id="s7" data-reveal>7. Data retention and deletion</h2>
+        <p>We keep your account and content data for as long as your account exists, so the app can show you your plan and remember your preferences.</p>
+        <p>You are always in control, and you can delete everything yourself:</p>
+        <ul>
+          <li><strong>In the app, go to Profile → Delete account.</strong></li>
+          <li>You will be asked to confirm. This is <strong>permanent and cannot be undone.</strong></li>
+          <li>Deletion removes your account <strong>and all associated data</strong> — tasks, learned preferences, and your action journal.</li>
+          <li>Your account and all associated data are <strong>deleted immediately and permanently</strong> when you confirm — this <strong>cannot be undone</strong>.</li>
+        </ul>
+        <div class="callout">
+          <p>If you ever have trouble deleting your data from within the app, email us at <a class="ink-underline" href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a> and we will take care of it.</p>
+        </div>
+
+        <h2 id="s8" data-reveal>8. Your privacy rights</h2>
+        <p>You have rights over your personal data, and we honor them regardless of where you live. Across the board: <strong>we do not sell or share your personal information</strong>, and we do not use it for cross-context behavioral advertising.</p>
+        <h3>If you are in California (CCPA/CPRA)</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Know</strong> what personal information we collect and how we use it (this policy describes it).</li>
+          <li><strong>Access</strong> a copy of your personal information.</li>
+          <li><strong>Delete</strong> your personal information (use Profile → Delete account, or email us).</li>
+          <li><strong>Correct</strong> inaccurate personal information.</li>
+          <li><strong>Opt out of sale or sharing</strong> — though there is nothing to opt out of, because we never sell or share your data.</li>
+          <li><strong>Not be discriminated against</strong> for exercising any of these rights.</li>
+        </ul>
+        <h3>If you are in the EEA or the UK (GDPR)</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> your personal data.</li>
+          <li><strong>Rectify</strong> (correct) inaccurate data.</li>
+          <li><strong>Erase</strong> your data ("right to be forgotten").</li>
+          <li><strong>Restrict</strong> or <strong>object</strong> to certain processing.</li>
+          <li><strong>Data portability</strong> — receive your data in a usable format.</li>
+          <li><strong>Lodge a complaint</strong> with your local data protection authority.</li>
+        </ul>
+        <p>Our legal bases for processing are: performing our contract with you (providing the app), and your consent (for example, when you choose to use the microphone).</p>
+        <p>To exercise any right, email us at <a class="ink-underline" href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a>. You can also delete everything yourself at any time via Profile → Delete account.</p>
+
+        <h2 id="s9" data-reveal>9. Children's privacy</h2>
+        <p>Nudge is <strong>not directed to children under 13</strong>, and the app is rated <strong>4+</strong> for general audiences. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, email us at <a class="ink-underline" href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a> and we will delete it.</p>
+
+        <h2 id="s10" data-reveal>10. Changes to this policy</h2>
+        <p>We may update this policy from time to time — for example, if we add a feature or change a provider. When we make a material change, we will update the <strong>"Last updated"</strong> date above and, where appropriate, notify you in the app. Please review this page periodically.</p>
+
+        <h2 id="s11" data-reveal>11. Governing law</h2>
+        <p>This Privacy Policy is governed by the laws of the State of Washington, United States, without regard to its conflict-of-laws rules.</p>
+
+        <hr />
+        <p><strong>Last updated:</strong> <span class="t-num">June 16, 2026</span></p>
+      </article>
+    </div>
+
     <div class="prose-foot">
       <a href="index.html"><span aria-hidden="true">&larr;</span> Back to home</a>
     </div>
-
   </main>
 
   <footer class="site-footer">
+    <div class="footer-rail" aria-hidden="true"></div>
     <div class="container">
       <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="Nudge — home">
-          <img src="assets/icon.png" alt="" width="32" height="32" />
+          <img src="assets/favicon-32.png" alt="" width="32" height="32" />
           <span>Nudge</span>
         </a>
         <p>A voice-first daily planner. Say what you want your day to look like — Nudge does the scheduling.</p>
+        <span class="soon">Coming soon to iOS.</span>
       </div>
       <nav class="footer-col" aria-label="Product">
         <h4>Product</h4>
         <ul>
           <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#how-title">How it works</a></li>
-          <li><a href="index.html#privacy">Privacy</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="support.html">Support</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="Legal and help">
         <h4>Legal &amp; help</h4>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="mailto:nudgeplannerapp@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -212,5 +261,7 @@
       </div>
     </div>
   </footer>
+
+  <script defer src="main.js"></script>
 </body>
 </html>
