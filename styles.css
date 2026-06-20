@@ -650,14 +650,8 @@ strong,b{ color:var(--text); font-weight:600; }
 
 /* second device offset + callout list visibility */
 @media (min-width:60rem){
-  .device--listening{
-    display:block;
-    position:absolute; top:0; left:0;
-    transform:translate(16%,-7%) scale(.92);
-    opacity:.82; z-index:0;
-  }
   .device--planned{ position:relative; z-index:1; }
-  .listen-card{ display:none; }     /* second device carries it on desktop */
+  .listen-card{ display:none; }     /* desktop hero is the single planned device */
 }
 @media (min-width:64rem){
   .device-callout-list{ display:none; }   /* pins carry it on wide desktop */
