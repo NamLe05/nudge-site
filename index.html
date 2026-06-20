@@ -7,7 +7,7 @@
   <title>Nudge — Plan your day by voice</title>
   <meta name="description" content="Nudge is a voice-first daily planner. Say what you want your day to look like, and Nudge turns it into a scheduled day — no fiddly forms. Private by design, with on-device transcription." />
   <link rel="canonical" href="https://namle05.github.io/nudge-site/" />
-  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#F6F6F8" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0A0A0C" media="(prefers-color-scheme: dark)" />
   <meta name="color-scheme" content="light dark" />
 
@@ -115,118 +115,195 @@
           </p>
         </div>
 
-        <!-- A faithful recreation of the app's Todo screen (HTML/CSS) -->
+        <!-- A faithful recreation of the app's Todo screen, in a real device frame -->
         <div class="hero-visual" data-reveal style="--reveal-delay:140ms" aria-hidden="true">
-          <div class="phone">
-            <div class="phone-screen">
+          <div class="device-stage">
 
-              <!-- header: greeting + add button -->
-              <div class="app-head">
-                <span class="app-greeting">Good morning, Nam</span>
-                <span class="app-add">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <!-- Second state: the agent listening (offset behind, desktop only) -->
+            <div class="device device--listening">
+              <span class="device-notch"></span>
+              <div class="device-screen">
+                <div class="listening-scrim"></div>
+                <div class="status-bar">
+                  <span class="clock">9:41</span>
+                  <span class="sb-glyphs">
+                    <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M7.5 9.5a1.3 1.3 0 1 0 0 .01M2.5 6.2a7 7 0 0 1 10 0M0 3.4a11 11 0 0 1 15 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                    <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><rect x="0.7" y="1" width="19" height="10" rx="2.5" stroke="currentColor" stroke-width="1.2"/><rect x="2.3" y="2.6" width="13" height="6.8" rx="1.2" fill="currentColor"/><rect x="21" y="4" width="1.8" height="4" rx="0.9" fill="currentColor"/></svg>
+                  </span>
+                </div>
+                <div class="app-head">
+                  <span class="app-greeting">Good morning</span>
+                  <span class="app-add"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </div>
+                <div class="app-date"><span>Friday</span><span class="app-date-num">June 20</span></div>
+                <div class="app-list">
+                  <div class="app-section"><span class="section-pill afternoon">Afternoon <span class="count">2</span><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+                  <div class="task"><span class="cat" style="background:#FFD8A8">🍽️</span><span class="body"><span class="t-name">Lunch with Priya</span><span class="t-sub"><span class="t-time">12:30 PM</span><span class="t-dur">45 min</span></span></span><span class="check"></span></div>
+                  <div class="task"><span class="cat" style="background:#C7D2FE">💼</span><span class="body"><span class="t-name">Focus block</span><span class="t-sub"><span class="t-time">2:00 PM</span><span class="t-dur">60 min</span></span></span><span class="check"></span></div>
+                </div>
+                <div class="feedback-chips">
+                  <span class="feedback-chip is-prev">Moved morning run to 7am</span>
+                  <span class="feedback-chip">Added Focus block at 2pm</span>
+                </div>
+                <span class="app-mic app-mic--live">
+                  <span class="wave">
+                    <span class="wave-bar" style="--h:35%"></span>
+                    <span class="wave-bar" style="--h:75%"></span>
+                    <span class="wave-bar" style="--h:100%"></span>
+                    <span class="wave-bar" style="--h:60%"></span>
+                    <span class="wave-bar" style="--h:40%"></span>
+                  </span>
                 </span>
+                <span class="home-indicator"></span>
               </div>
-
-              <!-- date row -->
-              <div class="app-date">
-                <span>Tuesday</span>
-                <span class="app-date-num">June 20</span>
-              </div>
-
-              <!-- weekly calendar -->
-              <div class="app-week">
-                <span class="week-chev"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <div class="week-days">
-                  <span class="day"><span class="d-letter">M</span><span class="d-num">16</span></span>
-                  <span class="day"><span class="d-letter">T</span><span class="d-num">17</span></span>
-                  <span class="day"><span class="d-letter">W</span><span class="d-num">18</span></span>
-                  <span class="day"><span class="d-letter">T</span><span class="d-num">19</span></span>
-                  <span class="day selected"><span class="d-letter">F</span><span class="d-num">20</span></span>
-                  <span class="day"><span class="d-letter">S</span><span class="d-num">21</span></span>
-                  <span class="day"><span class="d-letter">S</span><span class="d-num">22</span></span>
-                </div>
-                <span class="week-chev"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-
-              <div class="app-list">
-                <!-- MORNING -->
-                <div class="app-section">
-                  <span class="section-pill morning">
-                    Morning <span class="count">2</span>
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </div>
-                <div class="task done">
-                  <span class="cat" style="background:#B6E2C7">🏋️</span>
-                  <span class="body">
-                    <span class="t-name">Morning run</span>
-                    <span class="t-sub"><span class="t-time">7:00 AM</span><span class="t-dur">30 min</span></span>
-                  </span>
-                  <span class="check">
-                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </div>
-                <div class="task">
-                  <span class="cat" style="background:#C7D2FE">💼</span>
-                  <span class="body">
-                    <span class="t-name">Deep work — thesis draft</span>
-                    <span class="t-sub"><span class="t-time">9:30 AM</span><span class="t-dur">90 min</span></span>
-                  </span>
-                  <span class="check"></span>
-                </div>
-
-                <!-- AFTERNOON -->
-                <div class="app-section">
-                  <span class="section-pill afternoon">
-                    Afternoon <span class="count">2</span>
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </div>
-                <div class="task">
-                  <span class="cat" style="background:#FFD8A8">🍽️</span>
-                  <span class="body">
-                    <span class="t-name">Lunch with Priya</span>
-                    <span class="t-sub"><span class="t-time">12:30 PM</span><span class="t-dur">45 min</span></span>
-                  </span>
-                  <span class="check"></span>
-                </div>
-                <div class="task">
-                  <span class="cat" style="background:#C7D2FE">💼</span>
-                  <span class="body">
-                    <span class="t-name">Focus block</span>
-                    <span class="t-sub"><span class="t-time">2:00 PM</span><span class="t-dur">60 min</span></span>
-                  </span>
-                  <span class="check"></span>
-                </div>
-
-                <!-- EVENING -->
-                <div class="app-section">
-                  <span class="section-pill evening">
-                    Evening <span class="count">1</span>
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </div>
-                <div class="task">
-                  <span class="cat" style="background:#FBCFE8">📚</span>
-                  <span class="body">
-                    <span class="t-name">Read 20 pages</span>
-                    <span class="t-sub"><span class="t-time">8:00 PM</span><span class="t-dur">30 min</span></span>
-                  </span>
-                  <span class="check"></span>
-                </div>
-              </div>
-
-              <!-- floating mic button — the only prominent blue -->
-              <span class="app-mic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/>
-                  <path d="M6 11a6 6 0 0 0 12 0M12 17v3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-                </svg>
-              </span>
-
             </div>
+
+            <!-- Primary state: the planned day -->
+            <div class="device device--planned">
+              <span class="device-notch"></span>
+              <div class="device-screen phone-screen">
+
+                <!-- status bar -->
+                <div class="status-bar">
+                  <span class="clock">9:41</span>
+                  <span class="sb-glyphs">
+                    <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M7.5 9.5a1.3 1.3 0 1 0 0 .01M2.5 6.2a7 7 0 0 1 10 0M0 3.4a11 11 0 0 1 15 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                    <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><rect x="0.7" y="1" width="19" height="10" rx="2.5" stroke="currentColor" stroke-width="1.2"/><rect x="2.3" y="2.6" width="13" height="6.8" rx="1.2" fill="currentColor"/><rect x="21" y="4" width="1.8" height="4" rx="0.9" fill="currentColor"/></svg>
+                  </span>
+                </div>
+
+                <!-- header: greeting + add button -->
+                <div class="app-head" style="--row-i:0">
+                  <span class="app-greeting">Good morning</span>
+                  <span class="app-add">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  </span>
+                </div>
+
+                <!-- date row -->
+                <div class="app-date" style="--row-i:1">
+                  <span>Friday</span>
+                  <span class="app-date-num">June 20</span>
+                </div>
+
+                <!-- weekly calendar -->
+                <div class="app-week" style="--row-i:2">
+                  <span class="week-chev"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <div class="week-days">
+                    <span class="day"><span class="d-letter">M</span><span class="d-num">16</span></span>
+                    <span class="day"><span class="d-letter">T</span><span class="d-num">17</span></span>
+                    <span class="day"><span class="d-letter">W</span><span class="d-num">18</span></span>
+                    <span class="day"><span class="d-letter">T</span><span class="d-num">19</span></span>
+                    <span class="day selected"><span class="d-letter">F</span><span class="d-num">20</span></span>
+                    <span class="day"><span class="d-letter">S</span><span class="d-num">21</span></span>
+                    <span class="day"><span class="d-letter">S</span><span class="d-num">22</span></span>
+                  </div>
+                  <span class="week-chev"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </div>
+
+                <div class="app-list">
+                  <!-- MORNING -->
+                  <div class="app-section" style="--row-i:3">
+                    <span class="section-pill morning">
+                      Morning <span class="count">2</span>
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                  <div class="task done" style="--row-i:4">
+                    <span class="cat" style="background:#B6E2C7">🏋️</span>
+                    <span class="body">
+                      <span class="t-name">Morning run</span>
+                      <span class="t-sub"><span class="t-time">7:00 AM</span><span class="t-dur">30 min</span></span>
+                    </span>
+                    <span class="check">
+                      <svg class="demo-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                  <div class="task" style="--row-i:5">
+                    <span class="cat" style="background:#C7D2FE">💼</span>
+                    <span class="body">
+                      <span class="t-name">Deep work — thesis draft</span>
+                      <span class="t-sub"><span class="t-time">9:30 AM</span><span class="t-dur">90 min</span></span>
+                    </span>
+                    <span class="check"></span>
+                  </div>
+
+                  <!-- AFTERNOON -->
+                  <div class="app-section" style="--row-i:6">
+                    <span class="section-pill afternoon">
+                      Afternoon <span class="count">2</span>
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                  <div class="task" style="--row-i:7">
+                    <span class="cat" style="background:#FFD8A8">🍽️</span>
+                    <span class="body">
+                      <span class="t-name">Lunch with Priya</span>
+                      <span class="t-sub"><span class="t-time">12:30 PM</span><span class="t-dur">45 min</span></span>
+                    </span>
+                    <span class="check"></span>
+                  </div>
+                  <div class="task" style="--row-i:8">
+                    <span class="cat" style="background:#C7D2FE">💼</span>
+                    <span class="body">
+                      <span class="t-name">Focus block</span>
+                      <span class="t-sub"><span class="t-time">2:00 PM</span><span class="t-dur">60 min</span></span>
+                    </span>
+                    <span class="check"></span>
+                  </div>
+
+                  <!-- EVENING -->
+                  <div class="app-section" style="--row-i:9">
+                    <span class="section-pill evening">
+                      Evening <span class="count">1</span>
+                      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </div>
+                  <div class="task" style="--row-i:10">
+                    <span class="cat" style="background:#FBCFE8">📚</span>
+                    <span class="body">
+                      <span class="t-name">Read 20 pages</span>
+                      <span class="t-sub"><span class="t-time">8:00 PM</span><span class="t-dur">30 min</span></span>
+                    </span>
+                    <span class="check"></span>
+                  </div>
+                </div>
+
+                <!-- floating mic button — the only prominent blue -->
+                <span class="app-mic">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/>
+                    <path d="M6 11a6 6 0 0 0 12 0M12 17v3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+
+                <span class="home-indicator"></span>
+              </div>
+            </div>
+
+            <!-- grounding contact shadow -->
+            <span class="device-shadow"></span>
+
+            <!-- desktop callout pins -->
+            <span class="callout-pin callout-pin--day"><span class="pin-dot"></span> Tap any day</span>
+            <span class="callout-pin callout-pin--section"><span class="pin-dot"></span> Auto-sorted: morning · afternoon · evening</span>
+            <span class="callout-pin callout-pin--cat"><span class="pin-dot"></span> Color-coded by type</span>
+            <span class="callout-pin callout-pin--mic"><span class="pin-dot"></span> Hold to talk</span>
           </div>
+
+          <!-- collapsed listening + callout list (mobile / no second device) -->
+          <div class="listen-card">
+            <p class="lc-transcript">add a 30-minute focus block after lunch<span class="tail">…</span></p>
+            <span class="lc-chip"><span class="pin-dot"></span> Added Focus block at 2pm</span>
+          </div>
+          <ul class="device-callout-list">
+            <li><span class="pin-dot"></span> Tap any day to plan it</li>
+            <li><span class="pin-dot"></span> Auto-sorted: morning · afternoon · evening</li>
+            <li><span class="pin-dot"></span> Color-coded by type</li>
+            <li><span class="pin-dot"></span> Hold the mic to talk</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -404,12 +481,12 @@
       </div>
     </section>
 
-    <!-- ===================== S6 · CLOSING CTA ===================== -->
-    <section class="section cta-band" aria-labelledby="cta-title">
+    <!-- ===================== S6 · CLOSING CTA (the one dark moment) ===================== -->
+    <section class="section cta-band section--invert" aria-labelledby="cta-title">
       <div class="container">
         <div class="inner">
           <p class="kicker" data-reveal>Ready when you are</p>
-          <h2 id="cta-title" data-reveal style="--reveal-delay:60ms">Let your day <span class="hl">plan itself.</span></h2>
+          <h2 id="cta-title" data-reveal style="--reveal-delay:180ms">Let your day <span class="hl">plan itself.</span></h2>
           <p data-reveal style="--reveal-delay:120ms">
             Speak your intentions; Nudge keeps the schedule. Questions before you
             start? We’re a real person away.
