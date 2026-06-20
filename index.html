@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nudge — Plan your day by voice</title>
+  <meta name="description" content="Nudge is a voice-first daily planner. Say what you want your day to look like, and Nudge turns it into a scheduled day — no fiddly forms. Private by design, with on-device transcription." />
+  <link rel="canonical" href="https://namle05.github.io/nudge-site/" />
+  <meta name="theme-color" content="#5E72E4" />
+  <meta name="color-scheme" content="light" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nudge" />
+  <meta property="og:title" content="Nudge — Plan your day by voice" />
+  <meta property="og:description" content="Say what you want your day to look like, and Nudge turns it into a scheduled day. Private by design, with on-device transcription." />
+  <meta property="og:url" content="https://namle05.github.io/nudge-site/" />
+  <meta property="og:image" content="https://namle05.github.io/nudge-site/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nudge — plan your day by voice." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nudge — Plan your day by voice" />
+  <meta name="twitter:description" content="Say what you want your day to look like, and Nudge turns it into a scheduled day. Private by design." />
+  <meta name="twitter:image" content="https://namle05.github.io/nudge-site/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Nudge — plan your day by voice." />
+
+  <!-- Fonts: Fraunces (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..600&family=Inter:wght@400;500;550;600;650;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Nudge — home">
+        <img src="assets/icon.png" alt="" width="32" height="32" />
+        <span>Nudge</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-secondary" href="#features">Features</a>
+        <a class="nav-secondary" href="#privacy">Privacy</a>
+        <a class="nav-secondary" href="support.html">Support</a>
+        <a class="nav-cta" href="#get-started">Get started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="eyebrow rise"><span class="dot" aria-hidden="true"></span> Voice-first daily planner</span>
+          <h1 id="hero-title" class="rise d1">
+            Plan your day <span class="hl">by voice.</span>
+          </h1>
+          <p class="lede rise d2">
+            Nudge turns what you say into a scheduled day. Speak the way you
+            think — “move my run to 7&nbsp;a.m., add a 30-minute focus block
+            after lunch” — and watch your plan rearrange itself.
+          </p>
+          <div class="cta-row rise d3" id="get-started">
+            <a class="btn btn-primary" href="support.html">
+              Get in touch <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="btn btn-ghost" href="#features">See how it works</a>
+          </div>
+          <p class="reassure rise d3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Your voice stays on your phone. No ads, no tracking.
+          </p>
+        </div>
+
+        <!-- Pure-CSS phone mockup -->
+        <div class="hero-visual rise d2" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-day">Tuesday · June 16</div>
+              <div class="phone-title">Today</div>
+
+              <div class="task done">
+                <span class="stripe teal"></span>
+                <span class="tick"></span>
+                <span class="body">
+                  <span class="t-name">Morning walk</span>
+                  <span class="t-time">7:00 AM · 30 min</span>
+                </span>
+              </div>
+              <div class="task">
+                <span class="stripe deep"></span>
+                <span class="tick"></span>
+                <span class="body">
+                  <span class="t-name">Deep work — thesis draft</span>
+                  <span class="t-time">9:30 AM · 90 min</span>
+                </span>
+              </div>
+              <div class="task">
+                <span class="stripe"></span>
+                <span class="tick"></span>
+                <span class="body">
+                  <span class="t-name">Lunch with Priya</span>
+                  <span class="t-time">12:30 PM · 1 hr</span>
+                </span>
+              </div>
+              <div class="task">
+                <span class="stripe teal"></span>
+                <span class="tick"></span>
+                <span class="body">
+                  <span class="t-name">Focus block</span>
+                  <span class="t-time">2:00 PM · 30 min</span>
+                </span>
+              </div>
+
+              <p class="phone-quote">“Push my focus block to <b>2&nbsp;pm</b> and add a short walk before dinner.”</p>
+              <div class="phone-mic">
+                <span class="mic-dot">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/>
+                    <path d="M6 11a6 6 0 0 0 12 0M12 17v3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>Listening…</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Why Nudge</p>
+          <h2 id="features-title">A planner that listens, then does the arranging.</h2>
+          <p>
+            Most planners ask you to tap through forms — date, time, duration,
+            repeat. Nudge flips that around. You talk; it schedules. Three things
+            make that feel effortless.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <span class="glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="9" y="2.5" width="6" height="12" rx="3" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Voice-first planning</h3>
+            <p>
+              Tap the mic and describe your day in plain language. Nudge
+              understands what you mean — creating, moving, shortening and
+              clearing tasks — and your schedule updates as you speak. Prefer to
+              type? You can do that too.
+            </p>
+          </article>
+
+          <article class="feature teal">
+            <span class="glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s-7-4.4-7-9.7A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7 4.3C19 16.6 12 21 12 21z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M12 7V3.5M9.5 5.2 12 7l2.5-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>It learns your routine</h3>
+            <p>
+              The more you plan, the better it fits you. Nudge quietly picks up
+              how long your usual tasks tend to take and the rhythms you prefer,
+              so when you leave out a detail it fills in a sensible default —
+              and slides things to a free slot when they’d collide.
+            </p>
+          </article>
+
+          <article class="feature">
+            <span class="glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                <circle cx="12" cy="15.4" r="1.4" fill="currentColor"/>
+              </svg>
+            </span>
+            <h3>Private by design</h3>
+            <p>
+              Your speech is transcribed right on your device — the raw audio
+              never leaves your phone. Only the text of what you said is sent on
+              to interpret your plan. No analytics, no ad trackers, nothing sold.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section band" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2 id="how-title">From a sentence to a scheduled day.</h2>
+          <p>No setup ritual. Open the app, speak, and you’re planned.</p>
+        </div>
+
+        <ol class="steps" role="list">
+          <li class="step">
+            <h3>Say it out loud</h3>
+            <p>
+              Hold the mic and talk through your day, or just one change.
+              Natural phrasing is fine — times, durations, “tomorrow”, “after
+              lunch”, “every weekday”.
+            </p>
+          </li>
+          <li class="step">
+            <h3>Nudge arranges it</h3>
+            <p>
+              It reads your existing tasks and learned preferences, then creates,
+              updates or clears items to match — resolving clashes by sliding to
+              the next free slot.
+            </p>
+          </li>
+          <li class="step">
+            <h3>Glance and go</h3>
+            <p>
+              Your day appears as a clean morning/afternoon/evening list. Drag to
+              fine-tune, or undo the last change with a tap if it wasn’t quite
+              what you meant.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="assurance">
+          <div class="card">
+            <span class="lock" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="#fff" stroke-width="1.7"/>
+                <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+                <circle cx="12" cy="15.4" r="1.4" fill="#fff"/>
+              </svg>
+            </span>
+            <h2 id="privacy-title">Privacy isn’t a setting. It’s the design.</h2>
+            <p>
+              We built Nudge to collect as little as possible: your account, the
+              tasks you create, and the preferences it learns to help you plan.
+              That’s it. No advertising, no third-party trackers, and your data
+              is never sold or shared.
+            </p>
+            <p>
+              Read the full <a href="privacy.html">Privacy Policy</a> or the
+              <a href="terms.html">Terms of Use</a>.
+            </p>
+          </div>
+
+          <ul class="checklist" role="list">
+            <li>
+              <span class="ck" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3>Your voice stays on your phone</h3>
+                <p>Speech is transcribed on-device; the raw audio is never uploaded to us or anyone else.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ck" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3>No analytics or ad trackers</h3>
+                <p>There are no advertising or tracking SDKs in the app, and no cross-app tracking.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ck" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3>Your data is isolated and yours</h3>
+                <p>Row-Level Security means only you can read or write your rows. Delete everything anytime from Profile.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="inner">
+          <h2 id="cta-title">Let your day plan itself.</h2>
+          <p>
+            Speak your intentions; Nudge keeps the schedule. Questions before you
+            start? We’re a real person away.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="support.html">
+              Contact support <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="btn btn-ghost" href="privacy.html">Read the privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Nudge — home">
+          <img src="assets/icon.png" alt="" width="32" height="32" />
+          <span>Nudge</span>
+        </a>
+        <p>A voice-first daily planner. Say what you want your day to look like — Nudge does the scheduling.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-title">How it works</a></li>
+          <li><a href="index.html#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Legal and help">
+        <h4>Legal &amp; help</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="mailto:nudgeplannerapp@gmail.com">nudgeplannerapp@gmail.com</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Nudge. All rights reserved.</p>
+        <span class="made">Made with care for calmer days.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
