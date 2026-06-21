@@ -14,7 +14,7 @@ Please include your device and iOS version (e.g. iPhone 14, iOS 17) and a short 
 
 ### How does voice work?
 
-When you tap the microphone and speak, your speech is turned into text **right on your device** using an on-device speech model — your **raw audio never leaves your phone**. Only the resulting **text** is then sent to Google's Gemini API so the AI can understand your plan and make the right changes to your schedule. You can also just type instead of speaking.
+When you tap the microphone and speak, your speech is turned into text **right on your device** using an on-device speech model — your **raw audio never leaves your phone**. Only the resulting **text** is then sent to Google's Gemini API so the AI can understand your plan and make the right changes to your schedule.
 
 ### Is my data private?
 
