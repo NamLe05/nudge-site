@@ -54,6 +54,8 @@
 
   /* ---- TYPE ---- */
   --font-sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  /* Wordmark only — matches the logo glyph. */
+  --font-serif:"Averia Serif Libre",Georgia,"Times New Roman",serif;
 
   /* bimodal: quiet UI cluster, then a cliff to display */
   --fs--2:clamp(0.6875rem,0.66rem + 0.10vw,0.75rem);   /* 11→12 micro/eyebrow */
@@ -296,7 +298,7 @@ strong,b{ color:var(--text); font-weight:600; }
 }
 .brand:hover{ color:var(--text); text-decoration:none; }
 .brand img{ width:1.85rem; height:1.85rem; border-radius:8px; }
-.brand span{ line-height:1; }
+.brand span{ font-family:var(--font-serif); letter-spacing:normal; line-height:1; }
 
 .site-nav{ display:flex; align-items:center; gap:clamp(0.5rem,2vw,1.6rem); }
 .site-nav a{
